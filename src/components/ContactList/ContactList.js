@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { List, ListItem, Title, ParagraphText } from './ContactList.styled';
 import { Button } from '../App.styled';
 
@@ -24,4 +25,9 @@ export const ContactList = ({ contacts, deleteContact }) => {
       </List>
     </div>
   );
+};
+
+ContactList.propTypes = {
+  contacts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  deleteContact: PropTypes.func.isRequired,
 };
